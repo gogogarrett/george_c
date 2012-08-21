@@ -9,7 +9,7 @@
       <header id="header">
         <%= render '/refinery/header' -%>
       </header>
-      <section id="page" class="">
+      <section id="page" class="<%= @page.slug %>">
         <%= yield %>
       </section>
       <footer>
