@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Pridať Process
+            reorder: Preusporiadať Processes
+            reorder_done: Koniec radenia Processes
+          records:
+            title: Processes
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Processes. Kliknite na "Pridať Process" pre pridanie prvého process.
+          process:
+            view_live_html: Zobraziť náhľad process<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť process
+            delete: Zmazať process
+      processes:
+        show:
+          other: Daľšie Processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo

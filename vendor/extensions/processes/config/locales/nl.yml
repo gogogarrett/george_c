@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Maak een nieuwe Process
+            reorder: Wijzig de volgorde van de Processes
+            reorder_done: Klaar met het wijzingen van de volgorde van de Processes
+          records:
+            title: Processes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Processes. Druk op 'Maak een nieuwe Process' om de eerste aan te maken.
+          process:
+            view_live_html: Bekijk deze process op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze process
+            delete: Verwijder deze process voor eeuwig
+      processes:
+        show:
+          other: Andere Processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo

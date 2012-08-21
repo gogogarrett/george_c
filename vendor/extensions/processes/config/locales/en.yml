@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Add New Process
+            reorder: Reorder Processes
+            reorder_done: Done Reordering Processes
+          records:
+            title: Processes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Processes yet. Click "Add New Process" to add your first process.
+          process:
+            view_live_html: View this process live <br/><em>(opens in a new window)</em>
+            edit: Edit this process
+            delete: Remove this process forever
+      processes:
+        show:
+          other: Other Processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo

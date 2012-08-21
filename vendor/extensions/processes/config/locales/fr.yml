@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Process
+            reorder: Réordonner les Processes
+            reorder_done: Fin de réordonnancement des Processes
+          records:
+            title: Processes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Process. Cliquer sur "Créer un(e) nouve(au/l/lle) Process" pour créer votre premi(er/ère) process.'
+          process:
+            view_live_html: Voir ce(t/tte) process <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) process
+            delete: Supprimer définitivement ce(t/tte) process
+      processes:
+        show:
+          other: Autres Processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo

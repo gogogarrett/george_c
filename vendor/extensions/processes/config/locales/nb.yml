@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Lag en ny Process
+            reorder: Endre rekkefølgen på Processes
+            reorder_done: Ferdig å endre rekkefølgen Processes
+          records:
+            title: Processes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Processes enda. Klikk på "Lag en ny Process" for å legge til din første process.
+          process:
+            view_live_html: Vis hvordan denne process ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne process
+            delete: Fjern denne process permanent
+      processes:
+        show:
+          other: Andre Processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo

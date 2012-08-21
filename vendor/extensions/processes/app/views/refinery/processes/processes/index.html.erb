@@ -1,0 +1,51 @@
+<% content_for :body do %>
+
+  <div id="processes">
+    <% @processes.each_with_index do |process, index| %>
+
+      <div class="process <%= process.title %>">
+
+        <div class="image">
+          <%= image_fu process.photo %>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="content">
+          <div class="title">
+            <h2> <%= process.title %> </h2>
+          </div>
+          <div class="description">
+            <%=raw process.description %>
+          </div>
+        </div>
+
+      </div>
+
+
+    <% end %>
+  </div>
+
+  <div id="actions">
+    <% @processes.each_with_index do |process, index| %>
+      <p>
+        <i class="arrow"></i>
+        <a href="#" id="step_<%= index %>" class="step" data-step-id="<%= index %>">
+          STEP <%= index + 1 %> 
+        </a> - <%= process.title %> 
+      </p>
+    <% end %>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div id="prev_next">
+    <a href="#" id="left">prev</a>
+    <a href="#" id="right">next</a>
+  </div>
+
+
+
+<% end %>
+
+<%= render '/refinery/content_page' %>

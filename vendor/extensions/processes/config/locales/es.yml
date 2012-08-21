@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      processes:
+        title: Processes
+#        article: masculino/femenino
+    processes:
+      admin:
+        processes:
+          actions:
+            create_new: Crear nuevo process
+            reorder: Reordenar processes
+            reorder_done: Reordenación de processes completada
+          records:
+            title: Processes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay processes todavía. Pulsa en "Crear nuevo Process" para crear tu primer process.
+          process:
+            view_live_html: Ver este process como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este process
+            delete: Borrar este process para siempre
+      processes:
+        show:
+          other: Otros processes
+  activerecord:
+    attributes:
+      'refinery/processes/process':
+        title: Title
+        description: Description
+        photo: Photo
