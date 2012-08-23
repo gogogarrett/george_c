@@ -24,6 +24,7 @@ module Refinery
         Refinery::Page.send :has_many_page_images
         Refinery::Blog::Post.send :has_many_page_images if defined?(::Refinery::Blog)
         Refinery::Inventories::Inventory.send :has_many_page_images if defined?(::Refinery::Inventories)
+        Refinery::Galleries::Gallery.send :has_many_page_images if defined?(::Refinery::Galleries)
 
         Refinery::Image.module_eval do
           has_many :image_pages, :dependent => :destroy
@@ -43,6 +44,12 @@ module Refinery
 
         if defined?(Refinery::Inventories::Tab)
           Refinery::Inventories::Tab.register do |tab|
+            register tab
+          end
+        end
+
+        if defined?(Refinery::Galleries::Tab)
+          Refinery::Galleries::Tab.register do |tab|
             register tab
           end
         end

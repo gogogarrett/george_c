@@ -14,7 +14,6 @@ module Refinery
           plugin.activity = {
             :class_name => :'refinery/inventories/inventory'
           }
-          
         end
       end
 
