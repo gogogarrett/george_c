@@ -21,7 +21,7 @@ Galleries =
       else
         Galleries.currentImage = 0
         gallery.find('.image:eq(' + Galleries.currentImage + ')').show()
-    , 1000
+    , 3000
 
   show_current_gallery: (e) ->
     e.preventDefault()
