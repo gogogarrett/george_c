@@ -17,9 +17,9 @@ gem 'jquery-rails', '~> 2.0.0'
 
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-i18n', '~> 2.0.0'
-# gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-settings', '= 2.0.1'
 gem 'refinerycms-inquiries', '~> 2.0.0'
-# gem 'refinerycms-search', '~> 2.0.0'
-# gem 'refinerycms-page-images', '~> 2.0.0'
-
 gem 'refinerycms-processes', :path => 'vendor/extensions'
+
+gem 'refinerycms-inventories', :path => 'vendor/extensions'
+gem 'refinerycms-page-images', '~> 2.0.1', :path => 'vendor/extensions'

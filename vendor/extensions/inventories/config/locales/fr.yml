@@ -1,0 +1,32 @@
+fr:
+  refinery:
+    plugins:
+      inventories:
+        title: Inventories
+    inventories:
+      admin:
+        inventories:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Inventory
+            reorder: Réordonner les Inventories
+            reorder_done: Fin de réordonnancement des Inventories
+          records:
+            title: Inventories
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Inventory. Cliquer sur "Créer un(e) nouve(au/l/lle) Inventory" pour créer votre premi(er/ère) inventory.'
+          inventory:
+            view_live_html: Voir ce(t/tte) inventory <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) inventory
+            delete: Supprimer définitivement ce(t/tte) inventory
+      inventories:
+        show:
+          other: Autres Inventories
+  activerecord:
+    attributes:
+      'refinery/inventories/inventory':
+        title: Title
+        description: Description
+        details: Details
+        price: Price
+        address: Address
+        image: Image

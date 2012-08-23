@@ -4,6 +4,7 @@ Process =
 
   init: ->
     $('i').hide()
+    $('i').first().show()
     $('.process').hide()
     $('.process:eq(' + Process.currentProcess + ')').show()
 

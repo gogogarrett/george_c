@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      inventories:
+        title: Inventories
+    inventories:
+      admin:
+        inventories:
+          actions:
+            create_new: Maak een nieuwe Inventory
+            reorder: Wijzig de volgorde van de Inventories
+            reorder_done: Klaar met het wijzingen van de volgorde van de Inventories
+          records:
+            title: Inventories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Inventories. Druk op 'Maak een nieuwe Inventory' om de eerste aan te maken.
+          inventory:
+            view_live_html: Bekijk deze inventory op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze inventory
+            delete: Verwijder deze inventory voor eeuwig
+      inventories:
+        show:
+          other: Andere Inventories
+  activerecord:
+    attributes:
+      'refinery/inventories/inventory':
+        title: Title
+        description: Description
+        details: Details
+        price: Price
+        address: Address
+        image: Image

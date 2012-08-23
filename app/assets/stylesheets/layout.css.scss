@@ -2,6 +2,14 @@ body {
   background: url('background.jpg');
   background-repeat: x;
   background-position: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  p {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+  a {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    text-decoration: none;
+  }
 }
 
 div#page_container {
@@ -19,15 +27,10 @@ header#header {
     height: 157px;
     width: 213px;
     background: url('logo.png') no-repeat;
+    background-position: 0 -158px;
     background-position: 0 10;
     float: right;
-
-    &:hover {
-      background: url('logo.png') no-repeat;
-      background-position: 0 -158px;
-    }
   }
-
 
   nav#menu {
     margin-top: 125px;
@@ -53,7 +56,7 @@ header#header {
           text-decoration: none;
           text-transform: capitalize;
           display: block;
-          font-family: "Arial", "Helvetica", "sans-serif";
+          font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 
           -webkit-transition: font-size ease-in-out .2s;
           -o-transition: font-size ease-in-out .2s;
@@ -122,10 +125,11 @@ section#page.about {
     height: 307px;
     color: white;
     font-size: 13px;
-    font-family: "Arial", "Helvetica", "sans-serif";
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 
     p {
-      margin: 7px 0; padding: 0px;
+      margin: 0px 0; padding: 0px;
+      line-height: 16px;
     }
   }
 }
@@ -140,7 +144,7 @@ section#page.processes {
 
     .image {
       float: left;
-      margin-top: 40px;
+      margin-top: 75px;
       margin-left: 105px;
       width: 520px;
       text-align: center;
@@ -152,7 +156,7 @@ section#page.processes {
       padding: 10px 15px;
       color: white;
       font-size: 13px;
-      font-family: "Arial", "Helvetica", "sans-serif";
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 
       .title {
         h2 {
@@ -174,12 +178,12 @@ section#page.processes {
 
   #actions {
     float: left;
-    margin-left: 17px;
-    margin-top: 302px;
+    margin-left: 30px;
+    margin-top: 340px;
     padding: 20px;
     color: white;
     font-size: 13px;
-    font-family: "Arial", "Helvetica", "sans-serif";
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     line-height: 9px;
 
     p {
@@ -225,10 +229,188 @@ section#page.processes {
 }
 
 
-
 section#page.gallery      { background: url('gallery.jpg') no-repeat; }
-section#page.awards       { background: url('awards.jpg') no-repeat; }
-section#page.inventory    { background: url('inventory.jpg') no-repeat; }
+
+
+section#page.awards {
+  background: url('awards.jpg') no-repeat;
+
+  div.awards {
+    padding-left: 90px;
+    padding-top: 145px;
+    width: 300px;
+    color: white;
+    font-size: 13px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+}
+
+section#page.inventories {
+  background: url('inventory.jpg') no-repeat;
+  position: relative;
+  padding-top: 20px;
+
+  a.back_to_inventories {
+    position: absolute;
+    bottom: 47px;
+    left: 602px;
+    font-size: 13px;
+    color: #ccc6c6;
+  }
+  a.prev {
+    background: url('left.png') no-repeat;
+    text-indent: -9999px;
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    bottom: 50px;
+    left: 535px;
+    font-size: 13px;
+    color: #ccc6c6;
+  }
+  a.next {
+    background: url('right.png') no-repeat;
+    text-indent: -9999px;
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    bottom: 50px;
+    left: 825px;
+    font-size: 13px;
+    color: #ccc6c6;
+  }
+
+  #inventories {
+    margin-left: 375px;
+    //padding-top: 35px;
+    max-height: 485px;
+    overflow-y: scroll;
+    width: 660px;
+
+    p.more_info {
+      position: absolute;
+      bottom: 34px;
+      left: 550px;
+      font-size: 13px;
+      color: #ccc6c6;
+    }
+
+    .inventory {
+      background: url('inventory_background.png') no-repeat;
+      height: 126px;
+      width: 300px;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 35px;
+
+      .image {
+        margin-left: 20px;
+        padding-top: 7px;
+        width: 120px;
+        float: left;
+      }
+      a.title {
+        padding-top: 10px;
+        color: white;
+        float: left;
+        text-align: right;
+        width: 130px;
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  #inventory_details {
+    background: url('inventory_details.png') no-repeat;
+    height: 498;
+    width: 596;
+    margin-left: 385px;
+
+    h4 {
+      margin-left: 235px;
+      padding-top: 7px;
+      font-size: 13px;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    #inventory_gallery {
+      background: url('inventory_gallery_bg.png') no-repeat;
+      margin-left: 18px;
+      padding: 13px;
+      width: 561px;
+      height: 251px;
+
+      ul {
+        list-style: none;
+        margin: 0; padding: 0;
+
+        &.main {
+          width: 350px;
+          margin-right: 15px;
+          float: left;
+        }
+
+        &.thumb {
+          width: 185px;
+          max-height: 250px;
+          float: left;
+          overflow: hidden;
+
+          li {
+            float: left;
+            width: 70px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    header {
+      margin-top: 6px;
+      width: 561px;
+
+      .left_details {
+        width: 200px;
+        float: left;
+        padding: 0; margin: 0;
+        padding-left: 16px;
+
+        p {
+          padding: 0; margin: 0;
+          color: white;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      .right_details {
+        width: 200px;
+        float: right;
+        text-align: right;
+
+        p {
+          padding: 0; margin: 0;
+          color: white;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 6px;
+      width: 561px;
+      padding: 0; margin: 0;
+      padding-left: 16px;
+      color: white;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+}
 
 section#page.contact {
   background: url('contact.jpg') no-repeat;
@@ -264,20 +446,27 @@ section#page.contact {
   }
 }
 
+p {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
 footer {
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   color: #ae8d55;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 
   div#music_player {
     float: left;
     width: 200px;
     text-transform: uppercase;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   }
 
   div#info {
     float: right;
-    width: 350px;
+    width: 315px;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   }
 }
 

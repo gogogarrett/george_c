@@ -1,0 +1,16 @@
+<div id="inventories">
+  <% @inventories.each_with_index do |inventory, index| %>
+    <div class="inventory">
+
+      <div class="image">
+        <%= link_to image_fu(inventory.images.first, "115x105c"), refinery.inventories_inventory_path(inventory) %>
+      </div>
+
+      <%= link_to inventory.title, refinery.inventories_inventory_path(inventory), class: :title %>
+      <p class="details"><%=inventory.details %></p>
+    </div>
+  <% end %>
+
+  <div class="clearfix"></div>
+  <p class="more_info">CLICK ON A PROPERTY TO VIEW DETAIL</p>
+</div>

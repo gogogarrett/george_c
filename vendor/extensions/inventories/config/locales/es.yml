@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      inventories:
+        title: Inventories
+#        article: masculino/femenino
+    inventories:
+      admin:
+        inventories:
+          actions:
+            create_new: Crear nuevo inventory
+            reorder: Reordenar inventories
+            reorder_done: Reordenación de inventories completada
+          records:
+            title: Inventories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay inventories todavía. Pulsa en "Crear nuevo Inventory" para crear tu primer inventory.
+          inventory:
+            view_live_html: Ver este inventory como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este inventory
+            delete: Borrar este inventory para siempre
+      inventories:
+        show:
+          other: Otros inventories
+  activerecord:
+    attributes:
+      'refinery/inventories/inventory':
+        title: Title
+        description: Description
+        details: Details
+        price: Price
+        address: Address
+        image: Image

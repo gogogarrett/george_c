@@ -14,3 +14,6 @@ Refinery::Processes::Engine.load_seed
 
 # Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+
+# Added by Refinery CMS Inventories extension
+Refinery::Inventories::Engine.load_seed

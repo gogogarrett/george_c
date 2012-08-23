@@ -1,0 +1,32 @@
+en:
+  refinery:
+    plugins:
+      inventories:
+        title: Inventories
+    inventories:
+      admin:
+        inventories:
+          actions:
+            create_new: Add New Inventory
+            reorder: Reorder Inventories
+            reorder_done: Done Reordering Inventories
+          records:
+            title: Inventories
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Inventories yet. Click "Add New Inventory" to add your first inventory.
+          inventory:
+            view_live_html: View this inventory live <br/><em>(opens in a new window)</em>
+            edit: Edit this inventory
+            delete: Remove this inventory forever
+      inventories:
+        show:
+          other: Other Inventories
+  activerecord:
+    attributes:
+      'refinery/inventories/inventory':
+        title: Title
+        description: Description
+        details: Details
+        price: Price
+        address: Address
+        image: Image

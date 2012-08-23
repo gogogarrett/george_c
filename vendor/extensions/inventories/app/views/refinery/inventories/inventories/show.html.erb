@@ -1,0 +1,52 @@
+
+<section id="inventory_details">
+  <h4> <%= @inventory.title %> </h4>
+
+  <div id="inventory_gallery">
+    <ul class='main'>
+      <% @inventory.images.each_with_index do |img, index| %>
+        <li class='image' data-image-id="<%= index %>">
+          <%= image_fu img, "350x250c" %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul class='thumb'>
+      <% @inventory.images.each_with_index do |img, index| %>
+        <li class="image_thumb" data-image-id="<%= index %>">
+          <%= image_fu img, "80x80c" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <header class='clearfix'>
+    <div class="left_details">
+      <p> <%=raw @inventory.details %> </p>
+      <p> <%=raw @inventory.price %> </p>
+    </div>
+
+    <div class="right_details">
+      <p> <%=raw @inventory.address %> </p>
+    </div>
+  </header>
+
+  <div class="description">
+    <p> <%=raw @inventory.description %> </p>
+  </div>
+
+</section>
+
+<% if ::Refinery::Inventories::Inventory.where("position < ?", @inventory.position).present? %>
+  <% item = ::Refinery::Inventories::Inventory.where("position = ?", @inventory.position - 1).first %>
+  <%= link_to "PREV", refinery.inventories_inventory_path(item), class: "prev" %>
+<% end %>
+
+<%= link_to "RETURN TO INVENTORY", refinery.inventories_inventories_path, class: "back_to_inventories" %>
+
+<% if ::Refinery::Inventories::Inventory.where("position > ?", @inventory.position).present? %>
+  <% item = ::Refinery::Inventories::Inventory.where("position > ?", @inventory.position).first %>
+  <%= link_to "NEXT", refinery.inventories_inventory_path(item), class: "next" %>
+<% end %>
+
+

@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      inventories:
+        title: Inventories
+    inventories:
+      admin:
+        inventories:
+          actions:
+            create_new: Lag en ny Inventory
+            reorder: Endre rekkefølgen på Inventories
+            reorder_done: Ferdig å endre rekkefølgen Inventories
+          records:
+            title: Inventories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Inventories enda. Klikk på "Lag en ny Inventory" for å legge til din første inventory.
+          inventory:
+            view_live_html: Vis hvordan denne inventory ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne inventory
+            delete: Fjern denne inventory permanent
+      inventories:
+        show:
+          other: Andre Inventories
+  activerecord:
+    attributes:
+      'refinery/inventories/inventory':
+        title: Title
+        description: Description
+        details: Details
+        price: Price
+        address: Address
+        image: Image
