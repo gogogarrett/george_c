@@ -25,3 +25,6 @@ gem 'refinerycms-inventories', :path => 'vendor/extensions'
 gem 'refinerycms-page-images', '~> 2.0.1', :path => 'vendor/extensions'
 
 gem 'refinerycms-galleries', :path => 'vendor/extensions'
+
+# gem 'pjax_rails'
+gem "rack-pjax"

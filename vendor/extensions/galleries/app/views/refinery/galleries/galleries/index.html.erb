@@ -14,7 +14,7 @@
   <% @galleries.each do |gallery| %>
     <li>
       <i class="arrow"></i>
-      <%= link_to gallery.title, refinery.galleries_gallery_path(gallery), data: { title: gallery.title }, class: 'gallery_title' %>
+      <%= link_to gallery.title, "#", data: { title: gallery.title }, class: 'gallery_title' %>
     </li>
   <% end %>
 </ul>

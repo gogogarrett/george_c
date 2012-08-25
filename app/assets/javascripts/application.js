@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//- require jquery.pjax
 //= require_tree .
+
+$(function() {
+  $('nav a').pjax('[data-pjax-container]')
+});

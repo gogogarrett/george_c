@@ -10,7 +10,9 @@
         <%= render '/refinery/header' -%>
       </header>
       <section id="page" class="<%= @page.slug %>">
-        <%= yield %>
+        <div data-pjax-container>
+          <%= yield %>
+        </div>
       </section>
       <footer>
         <%= render '/refinery/footer' -%>

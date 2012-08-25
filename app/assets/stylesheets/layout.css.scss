@@ -18,11 +18,12 @@ div#page_container {
 }
 
 header#header {
-  height: 165px;
+  height: 145px;
   overflow: hidden;
   margin-bottom: 25px;
 
   h1#logo {
+    margin-top: 0px;
     text-indent: -9999px;
     height: 157px;
     width: 213px;
@@ -33,7 +34,7 @@ header#header {
   }
 
   nav#menu {
-    margin-top: 125px;
+    margin-top: 105px;
     width: 800px;
     float: left;
     // background: url('nav_background.jpg') no-repeat;
