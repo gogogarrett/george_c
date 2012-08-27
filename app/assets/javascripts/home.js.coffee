@@ -38,6 +38,10 @@ Process =
     Process.currentProcess = $(this).data('step-id')
     Process.show_process()
 
+
+
+
+
 Galleries =
   currentImage: 0,
   maxImage: 0,
@@ -53,19 +57,12 @@ Galleries =
 
   slideImages: (gallery) ->
     Galleries.myInterval = setInterval ->
-      $('.image').hide()
-
-      console.log('hey')
+      # $('.image').hide()
 
       if Galleries.currentImage < Galleries.maxImage
-        console.log('h1')
-
-        console.log gallery.find('.image:eq(' + Galleries.currentImage + ')')
         gallery.find('.image:eq(' + Galleries.currentImage + ')').show()
         Galleries.currentImage++
       else
-        console.log('h2')
-
         Galleries.currentImage = 0
         gallery.find('.image:eq(' + Galleries.currentImage + ')').show()
     , 3000
@@ -89,6 +86,12 @@ Galleries =
     $('i.arrow').hide()
     $('a[data-title="' + gallery.data('title') + '"]').prev('i.arrow').show()
 
+
+
+
+
+
+
 GeorgeC =
 
   init: ->
@@ -100,42 +103,33 @@ GeorgeC =
     $('a.contact').on 'click', @contact_page
 
   about_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'about'
 
   processes_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'processes'
-    Process.init()
 
   awards_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'awards'
 
   galleries_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'galleries'
-    Galleries.init()
 
   inventories_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'inventories'
 
   contact_page: (e) ->
-    GeorgeC.fancy_show()
     $("section#page").removeClass()
     $("section#page").addClass 'contact'
 
-  fancy_show: ->
-    # $("section#page").animate({
-    #   height: 0, opacity: 0.5
-    # }, 500, "linear", ->
-    #   $("section#page").animate({height: 500, opacity: 1}, 1000)
-    # )
 $ ->
-  GeorgeC.init()
+  $('#page').on 'pjax:end', ->
+    GeorgeC.init()
+    Galleries.init()
+    Process.init()
+
+
