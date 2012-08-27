@@ -19,5 +19,28 @@
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
+
+    <div id="dialog"> </div>
+
+    <script>
+      $(function() {
+        if ( window.location.pathname == "/" ) {
+
+        } else if ( window.location.pathname == "/galleries" ) {
+          Galleries.init()
+
+        } else if ( window.location.pathname == "/galleries" ) {
+          Process.init()
+        }
+        GeorgeC.init()
+
+        $('#page').on('pjax:success', function() {
+          GeorgeC.init()
+          Galleries.init()
+          Process.init()
+        });
+
+      });
+    </script>
   </body>
 </html>
