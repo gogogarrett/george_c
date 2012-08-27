@@ -27,17 +27,17 @@
         if ( window.location.pathname == "/" ) {
 
         } else if ( window.location.pathname == "/galleries" ) {
-          Galleries.init()
+          root.Galleries.init()
 
         } else if ( window.location.pathname == "/galleries" ) {
-          Process.init()
+          root.Process.init()
         }
-        GeorgeC.init()
+        root.GeorgeC.init()
 
         $('#page').on('pjax:success', function() {
-          GeorgeC.init()
-          Galleries.init()
-          Process.init()
+          root.GeorgeC.init()
+          root.Galleries.init()
+          root.Process.init()
         });
 
       });
