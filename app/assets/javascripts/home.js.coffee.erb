@@ -1,5 +1,4 @@
-root = exports ? this
-root.Process =
+Process =
   currentProcess: 0,
   maxProcesses: $('.process').size() - 1,
 
@@ -7,43 +6,43 @@ root.Process =
     $('i').hide()
     $('i').first().show()
     $('.process').hide()
-    $('.process:eq(' + root.Process.currentProcess + ')').show()
+    $('.process:eq(' + Process.currentProcess + ')').show()
     $('a#left').on 'click', @go_prev
     $('a#right').on 'click', @go_next
     $('a.step').on 'click', @gotostep
 
   go_prev: (e) ->
     e.preventDefault()
-    if root.Process.currentProcess == 0
-      root.Process.currentProcess = $(".process").size() - 1
+    if Process.currentProcess == 0
+      Process.currentProcess = $(".process").size() - 1
     else
-      root.Process.currentProcess--
-    rootProcess.show_process()
+      Process.currentProcess--
+    Process.show_process()
 
   go_next: (e) ->
     e.preventDefault()
-    if root.Process.currentProcess == root.Process.maxProcesses
-      root.Process.currentProcess = 0
+    if Process.currentProcess == Process.maxProcesses
+      Process.currentProcess = 0
     else
-      root.Process.currentProcess++
-    root.Process.show_process()
+      Process.currentProcess++
+    Process.show_process()
 
   show_process: ->
     $('.process').hide()
-    $('.process:eq(' + root.Process.currentProcess + ')').fadeIn()
+    $('.process:eq(' + Process.currentProcess + ')').fadeIn()
     $('i').hide()
-    $("a[data-step-id='" + root.Process.currentProcess + "']").prev('i').show()
+    $("a[data-step-id='" + Process.currentProcess + "']").prev('i').show()
 
   gotostep: (e) ->
     e.preventDefault()
-    root.Process.currentProcess = $(this).data('step-id')
-    root.Process.show_process()
+    Process.currentProcess = $(this).data('step-id')
+    Process.show_process()
 
 
 
 
 
-root.Galleries =
+Galleries =
   currentImage: 0,
   maxImage: 0,
 
@@ -51,21 +50,21 @@ root.Galleries =
     $('ul.gallery').hide()
     $gallery = $('ul.gallery').first()
     $gallery.show()
-    root.Galleries.currentImage = 0
-    root.Galleries.maxImage = $gallery.find('.image').length
+    Galleries.currentImage = 0
+    Galleries.maxImage = $gallery.find('.image').length
     $('a.gallery_title').on 'click', @show_current_gallery
     @slideImages($gallery)
 
   slideImages: (gallery) ->
-    root.Galleries.myInterval = setInterval ->
-      $('.image').hide()
+    Galleries.myInterval = setInterval ->
+      $('.image').fadeOut('fast')
 
-      if root.Galleries.currentImage < root.Galleries.maxImage
-        gallery.find('.image:eq(' + root.Galleries.currentImage + ')').show()
-        root.Galleries.currentImage++
+      if Galleries.currentImage < Galleries.maxImage
+        gallery.find('.image:eq(' + Galleries.currentImage + ')').fadeIn('slow')
+        Galleries.currentImage++
       else
-        root.Galleries.currentImage = 0
-        gallery.find('.image:eq(' + root.Galleries.currentImage + ')').show()
+        Galleries.currentImage = 0
+        gallery.find('.image:eq(' + Galleries.currentImage + ')').fadeIn('slow')
     , 2900
 
   show_current_gallery: (e) ->
@@ -77,23 +76,18 @@ root.Galleries =
     $('.image').hide()
     $gallery.find('.image').first().show()
 
-    window.clearInterval(root.Galleries.myInterval);
-    root.Galleries.currentImage = 0
-    root.Galleries.maxImage = $gallery.find('.image').length
-    root.Galleries.showArrow($gallery)
-    root.Galleries.slideImages($gallery)
+    window.clearInterval(Galleries.myInterval);
+    Galleries.currentImage = 0
+    Galleries.maxImage = $gallery.find('.image').length
+    Galleries.showArrow($gallery)
+    Galleries.slideImages($gallery)
 
   showArrow: (gallery) ->
     $('i.arrow').hide()
     $('a[data-title="' + gallery.data('title') + '"]').prev('i.arrow').show()
 
 
-
-
-
-
-
-root.GeorgeC =
+GeorgeC =
 
   init: ->
     $('a.about').on 'click', @about_page
@@ -144,3 +138,19 @@ root.GeorgeC =
     $("nav li").removeClass()
     $("nav li[data-menu-title='contact']").addClass 'contact_link'
     $("nav li[data-menu-title='contact']").addClass 'selected'
+
+$ ->
+  GeorgeC.init()
+
+  if window.location.pathname == "/galleries"
+    Galleries.init()
+  if window.location.pathname == "/processes"
+    Process.init()
+
+  $('#page').on 'pjax:success', ->
+    GeorgeC.init()
+
+    if window.location.pathname == "/galleries"
+      Galleries.init()
+    if window.location.pathname == "/processes"
+      Process.init()

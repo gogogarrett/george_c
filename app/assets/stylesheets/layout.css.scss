@@ -2,12 +2,12 @@ body {
   background: url('background.jpg');
   background-repeat: x;
   background-position: center;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Futura-medium, "Trebuchet MS", Arial, sans-serif;
   p {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: Futura-medium, "Trebuchet MS", Arial, sans-serif;
   }
   a {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: Futura-medium, "Trebuchet MS", Arial, sans-serif;
     text-decoration: none;
   }
 }
@@ -58,7 +58,7 @@ header#header {
           text-decoration: none;
           text-transform: capitalize;
           display: block;
-          font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+          font-family: Futura-medium, "Trebuchet MS", Arial, sans-serif;
 
           -webkit-transition: font-size ease-in-out .2s;
           -o-transition: font-size ease-in-out .2s;
@@ -424,11 +424,22 @@ section#page.contact {
   .inquiries {
     float: left;
     margin-left: 640px;
-    margin-top: 125px;
+    margin-top: 145px;
 
     h3 {
       margin: 0px;
       padding: 0px;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0px;
+      padding-bottom: 7px;
+      font-size: 12px;
+      &:last-child {
+        margin-bottom: 7px;
+      }
     }
 
     .info {
@@ -436,17 +447,38 @@ section#page.contact {
       width: 300px;
     }
 
-    input {
-      background: #040d14;
-      border: 1px solid #0b253a;
-    }
+    form {
+      padding-top: 10px;
 
-    input.save {
-      padding: 0; margin: 0;
-      color: white;
-      font-size: 18px;
-      border: none;
-      background: transparent;
+      label {
+        font-size: 12px;
+        text-align: right;
+      }
+
+      input {
+        background: #040d14;
+        border: 1px solid #0b253a;
+        &#inquiry_name {
+          width: 100px;
+        }
+        &#inquiry_email {
+          width: 200px;
+        }
+        &#inquiry_phone {
+          width: 200px;
+        }
+        &#inquery_phone_two {
+          width: 200px;
+        }
+      }
+
+      input.save {
+        padding: 0; margin: 0;
+        color: white;
+        font-size: 18px;
+        border: none;
+        background: transparent;
+      }
     }
   }
 }

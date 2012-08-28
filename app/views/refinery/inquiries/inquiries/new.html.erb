@@ -15,19 +15,20 @@
     <h3> Schedule a Tour </h3>
 
     <div class="field">
-      <%= f.required_label :name, :class => 'placeholder-fallback' %>
+      <%= f.label :name, 'First / Last Name:', :class => 'placeholder-fallback' %>
       <%= f.text_field :name, :class => 'text', :required => 'required', :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
     </div>
 
     <div class="field">
-      <%= f.required_label :email, :class => 'placeholder-fallback' %>
-      <%= f.email_field :email, :class => 'text email', :required => 'required', :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
+      <%= f.label :phone, 'Daytime Phone:', :class => 'placeholder-fallback' %>
+      <%= f.text_field :phone, :class => 'text phone', :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
     </div>
 
     <div class="field">
-      <%= f.label :phone, :class => 'placeholder-fallback' %>
-      <%= f.text_field :phone, :class => 'text phone', :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
+      <%= f.label :email, 'Email', :class => 'placeholder-fallback' %>
+      <%= f.email_field :email, :class => 'text email', :required => 'required', :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
     </div>
+
 
     <div class="actions">
       <%= f.submit 'submit', class: 'save' %>
