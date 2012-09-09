@@ -62,6 +62,5 @@ module GeorgeC
 
     # needed for refinery
     config.assets.initialize_on_precompile = true
-
   end
 end
