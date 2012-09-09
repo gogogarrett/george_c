@@ -139,9 +139,20 @@ GeorgeC =
     $("nav li[data-menu-title='contact']").addClass 'contact_link'
     $("nav li[data-menu-title='contact']").addClass 'selected'
 
+HomePage =
+  init: ->
+    $('#page_container').prepend($("<div id='splash'> <img src='/assets/splash.jpg' /> </div>"));
+    setInterval ->
+      $("#splash").fadeOut('slow');
+    , 2000
+
+
+
 $ ->
   GeorgeC.init()
 
+  if window.location.pathname == "/"
+    HomePage.init()
   if window.location.pathname == "/galleries"
     Galleries.init()
   if window.location.pathname == "/processes"

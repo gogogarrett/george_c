@@ -12,9 +12,23 @@ body {
   }
 }
 
+#splash {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 110%;
+  background: #0e304b;
+  display: block;
+  text-align: center;
+  img {
+    margin-top: 150px;
+  }
+}
+
 div#page_container {
   width: 1045px;
   margin: 0 auto;
+  position: relative;
 }
 
 header#header {
@@ -497,7 +511,29 @@ footer {
     float: left;
     width: 200px;
     text-transform: uppercase;
-  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+    .on {
+      background: url('on.png') no-repeat;
+      height: 12px;
+      width: 11px;
+      text-indent: -9999px;
+      display: block;
+      float: left;
+      margin-right: 10px;
+      margin-top: 1px;
+    }
+
+    .off {
+      background: url('off.png') no-repeat;
+      height: 12px;
+      width: 11px;
+      text-indent: -9999px;
+      display: block;
+      float: left;
+      margin-right: 10px;
+      margin-top: 1px;
+    }
   }
 
   div#info {

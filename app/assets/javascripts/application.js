@@ -14,30 +14,25 @@
 //= require jquery_ujs
 //= require jquery.pjax
 //= require 'home'
+//= require 'buzz'
 
 $(function() {
   $('nav a').pjax('[data-pjax-container]')
 
-  // $('[data-pjax-container]').bind("pjax:beforeSend.pjax", function() {
-  //   // return $('#page').hide(0);
-  //   $('#page').animate({
-  //     height: 0,
-  //     minHeight: 0,
-  //     opacity: 0
-  //   }, 500);
-  // }).bind("end.pjax", function() {
-  //   $('#page').animate({
-  //     height: 590,
-  //     minHeight: 590,
-  //     opacity: 1
-  //   }, 900);
-  // });
-
   $('[data-pjax-container]').bind("start.pjax", function() {
-    return $('#page').hide(0);
+    $('#page').hide(0);
   }).bind("end.pjax", function() {
-    return $('#page').fadeIn(1000);
+    $('#page').fadeIn(1000);
   });
 
+  var mySound = new buzz.sound( "music", { formats: ["mp3"] } );
+  mySound.play();
+
+  $("#music").on('click', function(e) {
+    e.preventDefault();
+    mySound.togglePlay();
+    $(this).toggleClass('off on');
+  });
 
 });
+
