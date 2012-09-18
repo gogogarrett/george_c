@@ -151,17 +151,10 @@ HomePage =
 $ ->
   GeorgeC.init()
 
-  if window.location.pathname == "/"
-    HomePage.init()
-  if window.location.pathname == "/galleries"
-    Galleries.init()
-  if window.location.pathname == "/processes"
-    Process.init()
+  $('#page').on 'pjax:success', ->
+    GeorgeC.init()
 
-  # $('#page').on 'pjax:success', ->
-  #   GeorgeC.init()
-
-  #   if window.location.pathname == "/galleries"
-  #     Galleries.init()
-  #   if window.location.pathname == "/processes"
-  #     Process.init()
+    if window.location.pathname == "/galleries"
+      Galleries.init()
+    if window.location.pathname == "/processes"
+      Process.init()
