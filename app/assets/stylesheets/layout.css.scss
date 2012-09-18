@@ -461,6 +461,23 @@ section#page.contact {
       width: 300px;
     }
 
+    .left {
+      float: left;
+      text-align: right;
+      width: 115px;
+      margin-right: 15px;
+    }
+
+    .right {
+      float: left;
+      width: 200px;
+    }
+
+    .actions {
+      margin-left: 70%;
+      margin-top: 15px;
+    }
+
     form {
       padding-top: 10px;
 
@@ -472,15 +489,23 @@ section#page.contact {
       input {
         background: #040d14;
         border: 1px solid #0b253a;
+
         &#inquiry_name {
-          width: 100px;
+          width: 160px;
         }
+
         &#inquiry_email {
-          width: 200px;
+          width: 160px;
         }
+
         &#inquiry_phone {
-          width: 200px;
+          width: 160px;
         }
+
+        &#inquiry_evening_phone {
+          width: 160px;
+        }
+
         &#inquery_phone_two {
           width: 200px;
         }
