@@ -57,7 +57,7 @@ Galleries =
 
   slideImages: (gallery) ->
     Galleries.myInterval = setInterval ->
-      $('.image').fadeOut('fast')
+      $('.image').hide()
 
       if Galleries.currentImage < Galleries.maxImage
         gallery.find('.image:eq(' + Galleries.currentImage + ')').fadeIn('slow')
@@ -155,6 +155,8 @@ $ ->
     GeorgeC.init()
 
     if window.location.pathname == "/galleries"
+      $('ul.gallery').hide()
+      $('.image').hide()
       Galleries.init()
     if window.location.pathname == "/processes"
       Process.init()
