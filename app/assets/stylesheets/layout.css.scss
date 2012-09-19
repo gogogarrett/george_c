@@ -303,6 +303,7 @@ section#page.inventories {
     margin-left: 375px;
     //padding-top: 35px;
     max-height: 485px;
+    min-height: 400px;
     overflow-y: scroll;
     width: 660px;
 
@@ -323,7 +324,7 @@ section#page.inventories {
       margin-bottom: 35px;
 
       .image {
-        margin-left: 20px;
+        margin-left: 33px;
         padding-top: 7px;
         width: 120px;
         float: left;
@@ -333,8 +334,15 @@ section#page.inventories {
         color: white;
         float: left;
         text-align: right;
-        width: 130px;
+        width: 115px;
         font-size: 12px;
+      }
+      p.details {
+        width: 117px;
+        float: left;
+        font-size: 12px;
+        margin-top: 50px;
+        color: white;
       }
     }
   }
