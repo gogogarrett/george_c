@@ -151,11 +151,16 @@ $ ->
 
   if window.location.pathname == "/"
     HomePage.init()
+  if window.location.pathname == "/galleries"
+    $('ul.gallery').hide()
+    $('.image').hide()
+    Galleries.init()
+  if window.location.pathname == "/processes"
+    Process.init()
 
   $('#page').on 'pjax:success', ->
     GeorgeC.init()
-
-
+    
     if window.location.pathname == "/galleries"
       $('ul.gallery').hide()
       $('.image').hide()
