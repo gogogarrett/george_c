@@ -4,11 +4,6 @@
 
   </span>
   <span class='actions'>
-    
-    <%= link_to refinery_icon_tag("application_go.png"), refinery.processes_process_path(process),
-        :title => t('.view_live_html'),
-        :target => "_blank" %>
-    
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_processes_admin_process_path(process),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.processes_admin_process_path(process),

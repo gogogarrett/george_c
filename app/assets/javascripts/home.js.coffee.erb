@@ -91,10 +91,10 @@ GeorgeC =
 
   init: ->
     $('a.about').on 'click', @about_page
-    $('a.processes').on 'click', @processes_page
+    $('a.process').on 'click', @processes_page
     $('a.awards').on 'click', @awards_page
-    $('a.galleries').on 'click', @galleries_page
-    $('a.inventories').on 'click', @inventories_page
+    $('a.gallery').on 'click', @galleries_page
+    $('a.inventory').on 'click', @inventories_page
     $('a.contact').on 'click', @contact_page
 
   about_page: (e) ->
@@ -146,17 +146,19 @@ HomePage =
       $("#splash").fadeOut('slow');
     , 2000
 
-
-
 $ ->
   GeorgeC.init()
+
+  if window.location.pathname == "/"
+    HomePage.init()
 
   $('#page').on 'pjax:success', ->
     GeorgeC.init()
 
-    if window.location.pathname == "/galleries"
+
+    if window.location.pathname == "/gallery"
       $('ul.gallery').hide()
       $('.image').hide()
       Galleries.init()
-    if window.location.pathname == "/processes"
+    if window.location.pathname == "/process"
       Process.init()

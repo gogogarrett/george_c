@@ -25,7 +25,7 @@ $(function() {
     $('#page').fadeIn(1000);
   });
 
-  var mySound = new buzz.sound( "music", { formats: ["mp3"] } );
+  var mySound = new buzz.sound( "assets/music", { formats: ["mp3", "ogg"] } );
   mySound.play();
 
   $("#music").on('click', function(e) {
