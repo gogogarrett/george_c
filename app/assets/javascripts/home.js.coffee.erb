@@ -108,8 +108,8 @@ GeorgeC =
     $("section#page").removeClass()
     $("section#page").addClass 'processes'
     $("nav li").removeClass()
-    $("nav li[data-menu-title='processes']").addClass 'processes_link'
-    $("nav li[data-menu-title='processes']").addClass 'selected'
+    $("nav li[data-menu-title='process']").addClass 'processes_link'
+    $("nav li[data-menu-title='process']").addClass 'selected'
 
   awards_page: (e) ->
     $("section#page").removeClass()
@@ -122,15 +122,15 @@ GeorgeC =
     $("section#page").removeClass()
     $("section#page").addClass 'galleries'
     $("nav li").removeClass()
-    $("nav li[data-menu-title='galleries']").addClass 'galleries_link'
-    $("nav li[data-menu-title='galleries']").addClass 'selected'
+    $("nav li[data-menu-title='gallery']").addClass 'galleries_link'
+    $("nav li[data-menu-title='gallery']").addClass 'selected'
 
   inventories_page: (e) ->
     $("section#page").removeClass()
     $("section#page").addClass 'inventories'
     $("nav li").removeClass()
-    $("nav li[data-menu-title='inventories']").addClass 'inventories_link'
-    $("nav li[data-menu-title='inventories']").addClass 'selected'
+    $("nav li[data-menu-title='inventory']").addClass 'inventories_link'
+    $("nav li[data-menu-title='inventory']").addClass 'selected'
 
   contact_page: (e) ->
     $("section#page").removeClass()
@@ -151,7 +151,7 @@ $ ->
 
   if window.location.pathname == "/"
     HomePage.init()
-    
+
   #  if window.location.pathname == "/galleries"
   #    $('ul.gallery').hide()
   #    $('.image').hide()
