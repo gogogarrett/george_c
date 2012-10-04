@@ -32,9 +32,10 @@ div#page_container {
 }
 
 header#header {
-  height: 145px;
+  height: 157px;
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-left: -25px;
+  margin-bottom: 0px;
 
   h1#logo {
     margin-top: 0px;
@@ -48,10 +49,9 @@ header#header {
   }
 
   nav#menu {
-    margin-top: 100px;
+    margin-top: 105px;
     width: 800px;
     float: left;
-    // background: url('nav_background.jpg') no-repeat;
 
     ul {
       margin: 0; padding: 0;
