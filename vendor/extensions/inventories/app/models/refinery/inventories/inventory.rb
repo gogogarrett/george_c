@@ -3,7 +3,7 @@ module Refinery
     class Inventory < Refinery::Core::BaseModel
       self.table_name = 'refinery_inventories'
 
-      attr_accessible :title, :description, :details, :price, :address, :image_id, :position
+      attr_accessible :title, :description, :details, :price, :address, :image_id, :positionm
 
       acts_as_indexed :fields => [:title, :description, :details, :price, :address]
 
