@@ -3,6 +3,7 @@ Process =
   maxProcesses: $('.process').size() - 1,
 
   init: ->
+    console.log 'were in the Processes init'
     $('i').hide()
     $('i').first().show()
     $('.process').hide()
@@ -47,6 +48,7 @@ Galleries =
   maxImage: 0,
 
   init: ->
+    console.log 'were in the Galleries init'
     $('ul.gallery').hide()
     $gallery = $('ul.gallery').first()
     $gallery.show()
@@ -90,6 +92,7 @@ Galleries =
 GeorgeC =
 
   init: ->
+    console.log 'were in the GeorgeC init'
     $('a.about').on 'click', @about_page
     $('a.process').on 'click', @processes_page
     $('a.awards').on 'click', @awards_page
