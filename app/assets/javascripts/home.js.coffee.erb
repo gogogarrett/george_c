@@ -4,6 +4,8 @@ Process =
 
   init: ->
     console.log 'were in the Processes init'
+    console.log Process.currentProcess
+    console.log $('.process:eq(' + Process.currentProcess + ')')
     $('i').hide()
     $('i').first().show()
     $('.process').hide()
