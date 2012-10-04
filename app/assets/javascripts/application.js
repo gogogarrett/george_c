@@ -26,11 +26,11 @@ $(function() {
   });
 
   var mySound = new buzz.sound( "assets/music", { formats: ["mp3", "ogg"] } );
-  // mySound.play();
+  mySound.play();
 
   $("#music").on('click', function(e) {
     e.preventDefault();
-    // mySound.togglePlay();
+    mySound.togglePlay();
     $(this).toggleClass('off on');
   });
 
