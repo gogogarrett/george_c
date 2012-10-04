@@ -1,11 +1,8 @@
 Process =
   currentProcess: 0,
-  maxProcesses: $('.process').size() - 1,
+  maxProcesses: $('#processes .process').size() - 1,
 
   init: ->
-    console.log 'were in the Processes init'
-    console.log Process.currentProcess
-    console.log $('.process:eq(' + Process.currentProcess + ')')
     $('i').hide()
     $('i').first().show()
     $('#processes .process').hide()
@@ -41,16 +38,11 @@ Process =
     Process.currentProcess = $(this).data('step-id')
     Process.show_process()
 
-
-
-
-
 Galleries =
   currentImage: 0,
   maxImage: 0,
 
   init: ->
-    console.log 'were in the Galleries init'
     $('ul.gallery').hide()
     $gallery = $('ul.gallery').first()
     $gallery.show()
@@ -90,11 +82,8 @@ Galleries =
     $('i.arrow').hide()
     $('a[data-title="' + gallery.data('title') + '"]').prev('i.arrow').show()
 
-
 GeorgeC =
-
   init: ->
-    console.log 'were in the GeorgeC init'
     $('a.about').on 'click', @about_page
     $('a.process').on 'click', @processes_page
     $('a.awards').on 'click', @awards_page

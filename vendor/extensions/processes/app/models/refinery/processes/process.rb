@@ -8,6 +8,7 @@ module Refinery
       acts_as_indexed :fields => [:title, :description]
 
       validates :title, :presence => true, :uniqueness => true
+      validates_length_of :description, :minimum => 5, :maximum => 500, :allow_blank => true
 
       belongs_to :photo, :class_name => '::Refinery::Image'
     end

@@ -164,7 +164,12 @@ section#page.processes {
 
       .description {
         height: 100px;
-        overflow-y: scroll;
+        overflow-y: hidden;
+        p {
+          font-size: 12px;
+          margin: 0;
+          padding-bottom: 5px;
+        }
       }
     }
 
@@ -535,9 +540,10 @@ p {
 }
 
 footer {
+  margin-top: 10px;
   margin-bottom: 50px;
   color: #ae8d55;
-  font-size: 16px;
+  font-size: 15px;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 
   div#music_player {
@@ -572,7 +578,8 @@ footer {
   div#info {
     float: right;
     width: 315px;
-  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    text-align: right;
   }
 }
 
