@@ -1,6 +1,6 @@
 <div id="slideshow">
   <% @galleries.each_with_index do |gallery, index| %>
-    <ul class="gallery <%= gallery.title%>" data-title="<%= gallery.title %>">
+    <ul class="gallery <%= gallery.title.downcase.gsub(" ","_") %>" data-title="<%= gallery.title.downcase.gsub(" ","_") %>">
       <% gallery.images.each_with_index do |image, index| %>
         <li data-image-id="<%= index %>" class='image'>
           <%= image_fu image %>
@@ -14,7 +14,7 @@
   <% @galleries.each do |gallery| %>
     <li>
       <i class="arrow"></i>
-      <%= link_to gallery.title, "#", data: { title: gallery.title }, class: 'gallery_title' %>
+      <%= link_to gallery.title, "#", data: { title: gallery.title.downcase.gsub(" ","_") }, class: 'gallery_title' %>
     </li>
   <% end %>
 </ul>

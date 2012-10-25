@@ -1,13 +1,12 @@
 Process =
   currentProcess: 0,
-  maxProcesses: $('.process').size() - 1,
+  maxProcesses: $('#processes .process').size() - 1,
 
   init: ->
     $('i').hide()
     $('i').first().show()
-    $('.process').hide()
-    $('.process:eq(' + Process.currentProcess + ')').show()
-
+    $('#processes .process').hide()
+    $('#processes .process:eq(' + Process.currentProcess + ')').show()
     $('a#left').on 'click', @go_prev
     $('a#right').on 'click', @go_next
     $('a.step').on 'click', @gotostep
@@ -15,7 +14,7 @@ Process =
   go_prev: (e) ->
     e.preventDefault()
     if Process.currentProcess == 0
-      Process.currentProcess = $(".process").size() - 1
+      Process.currentProcess = $("#processes .process").size() - 1
     else
       Process.currentProcess--
     Process.show_process()
@@ -29,8 +28,8 @@ Process =
     Process.show_process()
 
   show_process: ->
-    $('.process').hide()
-    $('.process:eq(' + Process.currentProcess + ')').fadeIn()
+    $('#processes .process').hide()
+    $('#processes .process:eq(' + Process.currentProcess + ')').fadeIn()
     $('i').hide()
     $("a[data-step-id='" + Process.currentProcess + "']").prev('i').show()
 
@@ -39,7 +38,5 @@ Process =
     Process.currentProcess = $(this).data('step-id')
     Process.show_process()
 
-
 $ ->
- # Process.init()
-
+  Process.init()

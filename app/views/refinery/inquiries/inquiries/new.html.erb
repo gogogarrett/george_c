@@ -4,7 +4,7 @@
     <%=raw @page.content_for(:body) %>
   </div>
 
-  <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+  <%= form_for [refinery, :inquiries, @inquiry], html: {class: 'clearfix'} do |f| %>
 
     <%= render :partial => "/refinery/admin/error_messages",
                :locals => {

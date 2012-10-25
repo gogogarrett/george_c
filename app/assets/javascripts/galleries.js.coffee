@@ -43,4 +43,4 @@ Galleries =
     console.log $('a[data-title="' + gallery.data('title') + '"]').prev('i.arrow').show()
 
 $ ->
-# Galleries.init()
+  Galleries.init()
