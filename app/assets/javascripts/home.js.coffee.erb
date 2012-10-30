@@ -1,80 +1,12 @@
-GeorgeC =
-  init: ->
-    $('a.about').on 'click', @about_page
-    $('a.process').on 'click', @processes_page
-    $('a.awards').on 'click', @awards_page
-    $('a.gallery').on 'click', @galleries_page
-    $('a.inventory').on 'click', @inventories_page
-    $('a.contact').on 'click', @contact_page
-
-  about_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'about'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='about']").addClass 'about_link'
-    $("nav li[data-menu-title='about']").addClass 'selected'
-
-  processes_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'processes'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='process']").addClass 'processes_link'
-    $("nav li[data-menu-title='process']").addClass 'selected'
-
-  awards_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'awards'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='awards']").addClass 'awards_link'
-    $("nav li[data-menu-title='awards']").addClass 'selected'
-
-  galleries_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'galleries'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='gallery']").addClass 'galleries_link'
-    $("nav li[data-menu-title='gallery']").addClass 'selected'
-
-  inventories_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'inventories'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='inventory']").addClass 'inventories_link'
-    $("nav li[data-menu-title='inventory']").addClass 'selected'
-
-  contact_page: (e) ->
-    $("section#page").removeClass()
-    $("section#page").addClass 'contact'
-    $("nav li").removeClass()
-    $("nav li[data-menu-title='contact']").addClass 'contact_link'
-    $("nav li[data-menu-title='contact']").addClass 'selected'
-
 HomePage =
   init: ->
+    $("#menu").addClass('hidden')
     $('#page_container').prepend($("<div id='splash'> <img src='/assets/splash.jpg' /> </div>"));
     setInterval ->
       $("#splash").fadeOut('slow');
+      $("#menu").removeClass('hidden')
     , 2000
 
 $ ->
-  # GeorgeC.init()
-
   if window.location.pathname == "/"
     HomePage.init()
-
-  #  if window.location.pathname == "/galleries"
-  #    $('ul.gallery').hide()
-  #    $('.image').hide()
-  #    Galleries.init()
-  #  if window.location.pathname == "/processes"
-  #    Process.init()
-
-  $('#page').on 'pjax:success', ->
-    GeorgeC.init()
-
-    if window.location.pathname == "/galleries"
-      $('ul.gallery').hide()
-      $('.image').hide()
-      Galleries.init()
-    if window.location.pathname == "/processes"
-      Process.init()

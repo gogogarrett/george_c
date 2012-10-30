@@ -26,15 +26,16 @@ $(function() {
   //   $('#page').fadeIn(1000);
   // });
 
-  if (window.location.pathname == "/") {
-    var mySound = new buzz.sound( "assets/music", { formats: ["mp3", "ogg"] } );
-    mySound.play();
+  var mySound = new buzz.sound( "assets/music", { formats: ["mp3", "ogg"] } );
 
-    $("#music").on('click', function(e) {
-      e.preventDefault();
-      mySound.togglePlay();
-      $(this).toggleClass('off on');
-    });
+  $("#music").on('click', function(e) {
+    e.preventDefault();
+    mySound.togglePlay();
+    $(this).toggleClass('off on');
+  });
+  
+  if (window.location.pathname == "/") {
+    mySound.play();
   }
 
 });

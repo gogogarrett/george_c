@@ -244,6 +244,11 @@ section#page.gallery {
 
     ul {
       list-style: none;
+      li {
+        img {
+          max-width: 400px;
+        }
+      }
     }
   }
 
