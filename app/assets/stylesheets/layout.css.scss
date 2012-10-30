@@ -2,14 +2,14 @@ body {
   background: url('background.jpg');
   background-repeat: x;
   background-position: center;
-  font-family: Futura-light, "Trebuchet MS", Arial, sans-serif;
+  font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
   font-size: 12px;
   p {
-    font-family: Futura-light, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
     font-size: 12px;
   }
   a {
-    font-family: Futura-light, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
     text-decoration: none;
     font-size: 12px;
     &:link {
@@ -84,7 +84,7 @@ header#header {
           text-decoration: none;
           text-transform: capitalize;
           display: block;
-          font-family: Futura-medium, "Trebuchet MS", Arial, sans-serif;
+          font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
 
           -webkit-transition: font-size ease-in-out .2s;
           -o-transition: font-size ease-in-out .2s;
@@ -131,7 +131,7 @@ section#page.about {
     height: 307px;
     color: white;
     font-size: 13px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
 
     p {
       margin: 0px 0; padding: 0px;
@@ -164,7 +164,7 @@ section#page.process {
       padding: 10px 15px;
       color: white;
       font-size: 13px;
-      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
 
       .title {
         h2 {
@@ -196,7 +196,7 @@ section#page.process {
     padding: 20px;
     color: white;
     font-size: 13px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
     line-height: 9px;
 
     p {
@@ -285,7 +285,7 @@ section#page.awards {
     width: 300px;
     color: white;
     font-size: 13px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
   }
 }
 
@@ -569,7 +569,7 @@ section#page.thank-you {
 }
 
 p {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: 'FuturaBT-Light', "Trebuchet MS", Arial, sans-serif;
 }
 
 footer {
