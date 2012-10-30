@@ -3,7 +3,6 @@
     <ul class="gallery <%= gallery.title.downcase.gsub(" ","_") %>" data-title="<%= gallery.title.downcase.gsub(" ","_") %>">
       <% gallery.images.each_with_index do |image, index| %>
         <li data-image-id="<%= index %>" class='image'>
-          <%#= image_fu image %>
           <%= image_tag(url_for(image.url)) %>
         </li>
       <% end %>

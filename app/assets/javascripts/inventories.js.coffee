@@ -1,8 +1,7 @@
 Inventories =
 
   init: ->
-    $('.image').hide()
-    $('.image').first().show()
+    $('.image').hide().first().show()
     $(".image_thumb").on 'click', @show_main_picture
 
   show_main_picture: ->
@@ -11,5 +10,6 @@ Inventories =
     $('.image[data-image-id="' + image_id + '"]').show();
 
 $ ->
-  Inventories.init()
+  if window.location.pathname.match(/\/inventories\/\d+/)
+    Inventories.init()
 

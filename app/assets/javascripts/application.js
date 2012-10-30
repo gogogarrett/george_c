@@ -18,14 +18,6 @@
 //= require_tree
 
 $(function() {
-  // $('nav a').pjax('[data-pjax-container]')
-
-  // $('[data-pjax-container]').bind("start.pjax", function() {
-  //   $('#page').hide(0);
-  // }).bind("end.pjax", function() {
-  //   $('#page').fadeIn(1000);
-  // });
-
   var mySound = new buzz.sound( "assets/music", { formats: ["mp3", "ogg"] } );
 
   $("#music").on('click', function(e) {
@@ -33,10 +25,8 @@ $(function() {
     mySound.togglePlay();
     $(this).toggleClass('off on');
   });
-  
+
   if (window.location.pathname == "/") {
     mySound.play();
   }
-
 });
-

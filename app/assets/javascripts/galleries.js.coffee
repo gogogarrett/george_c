@@ -40,7 +40,7 @@ Galleries =
 
   showArrow: (gallery) ->
     $('i.arrow').hide()
-    console.log $('a[data-title="' + gallery.data('title') + '"]').prev('i.arrow').show()
 
 $ ->
-  Galleries.init()
+  if window.location.pathname.match(/\/galleries/)
+    Galleries.init()

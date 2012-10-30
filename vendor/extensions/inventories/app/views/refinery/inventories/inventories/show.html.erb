@@ -1,4 +1,3 @@
-
 <section id="inventory_details">
   <h4> <%= @inventory.title %> </h4>
 
@@ -48,5 +47,3 @@
   <% item = ::Refinery::Inventories::Inventory.where("position > ?", @inventory.position).first %>
   <%= link_to "NEXT", refinery.inventories_inventory_path(item), class: "next" %>
 <% end %>
-
-
