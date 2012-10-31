@@ -17,18 +17,11 @@
  * 
  * © 2012 Bitstream Inc
 */
-
-
-
-
-
-
-  
- @font-face {
+ 
+@font-face {
   font-family: 'FuturaBT-Light';
   src: url('webfonts/2474BE_0_0.eot');
   src: url('webfonts/2474BE_0_0.eot?#iefix') format('embedded-opentype'),
   url('webfonts/2474BE_0_0.woff') format('woff'),
   url('webfonts/2474BE_0_0.ttf') format('truetype');
-}
- 
+} 

@@ -1,5 +1,7 @@
 <section id="inventory_details">
-  <h4> <%= @inventory.title %> </h4>
+  <div class="title_bar">
+    <h4> <%= @inventory.title %> </h4>
+  </div>
 
   <div id="inventory_gallery">
     <ul class='main'>
@@ -41,9 +43,11 @@
   <%= link_to "PREV", refinery.inventories_inventory_path(item), class: "prev" %>
 <% end %>
 
-<%= link_to "RETURN TO INVENTORY", refinery.inventories_inventories_path, class: "back_to_inventories" %>
+<div class="return_to_inv">
+  <%= link_to "RETURN TO INVENTORY", refinery.inventories_inventories_path, class: "back_to_inventories" %>
+</div>
 
-<% if ::Refinery::Inventories::Inventory.where("position > ?", @inventory.position).present? %>
-  <% item = ::Refinery::Inventories::Inventory.where("position > ?", @inventory.position).first %>
+<% if Refinery::Inventories::Inventory.where("position > ?", @inventory.position).present? %>
+  <% item = Refinery::Inventories::Inventory.where("position > ?", @inventory.position).first %>
   <%= link_to "NEXT", refinery.inventories_inventory_path(item), class: "next" %>
 <% end %>

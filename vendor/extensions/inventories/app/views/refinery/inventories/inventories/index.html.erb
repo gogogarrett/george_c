@@ -1,4 +1,4 @@
-<div id="inventories">
+<div id="inventories" class='scroll-pane'>
   <% @inventories.each_with_index do |inventory, index| %>
     <div class="inventory">
 
@@ -14,3 +14,11 @@
   <div class="clearfix"></div>
   <p class="more_info">CLICK ON A PROPERTY TO VIEW DETAIL</p>
 </div>
+
+<%= content_for :javascripts do %>
+<script>
+  $(function() {
+    $('.scroll-pane').jScrollPane();
+  })
+</script>
+<% end %>

@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.pjax
 //= require 'home'
 //= require 'buzz'
 //= require_tree
