@@ -68,15 +68,17 @@ header#header {
     ul {
       margin: 0; padding: 0;
       list-style: none;
-      height: 36px;
+      height: 50px;
+
 
       li {
-        margin-top: 12px;
+        /*margin-top: 12px;*/
         float: left;
         text-align: center;
         width: 100px;
         margin-right: 15px;
-        height: 37px;
+        padding-top: 10px;
+        height: 50px;
 
         a {
           color: #ae8d55;
@@ -97,12 +99,12 @@ header#header {
 
         }
 
-        &.selected.about_link { background: url('about_link.png') 6px -5px no-repeat; }
-        &.selected.process_link { background: url('process_link.png') 3px -5px no-repeat; }
-        &.selected.gallery_link { background: url('gallery_link.png') 13px -9px no-repeat; }
-        &.selected.awards_link { background: url('awards_link.png') 9px 1px no-repeat; }
-        &.selected.inventory_link { background: url('inventory_link.png') 3px 1px no-repeat; }
-        &.selected.contact_link { background: url('contact_link.png') 3px 1px no-repeat; }
+        &.selected.about_link { background: url('about_link.png') 6px 4px no-repeat; }
+        &.selected.process_link { background: url('process_link.png') -1px 4px no-repeat; }
+        &.selected.gallery_link { background: url('gallery_link.png') 13px 0px no-repeat; }
+        &.selected.awards_link { background: url('awards_link.png') 4px 6px no-repeat; }
+        &.selected.inventory_link { background: url('inventory_link.png') 3px 7px no-repeat; }
+        &.selected.contact_link { background: url('contact_link.png') 10px 7px no-repeat; }
 
        //&.selected.about_link { background: url(about_link.png) no-repeat; }
        //&.selected.processes_link { background: url(process_link.png) no-repeat; }
@@ -118,6 +120,15 @@ header#header {
 
 section#page {
   min-height: 590px;
+  position: relative;;
+
+  p.more_info {
+    position: absolute;
+    bottom: 34px;
+    left: 567px;
+    font-size: 13px;
+    color: #ccc6c6;
+  }
 }
 
 section#page.about {
@@ -177,6 +188,7 @@ section#page.process {
       }
 
       .description {
+        padding-top: 15px;
         height: 100px;
         overflow-y: hidden;
         p {
@@ -213,7 +225,7 @@ section#page.process {
 
   #prev_next {
     position: absolute;
-    bottom: 88px;
+    bottom: 87px;
     left: 289px;
 
     a {
@@ -224,7 +236,7 @@ section#page.process {
       font-size: 14px;
 
       &#left {
-        margin-right: 75px;
+        margin-right: 92px;
       }
     }
   }
