@@ -9,8 +9,8 @@
       <header id="header">
         <%= render '/refinery/header' -%>
       </header>
-      <section id="page" class="<%= @page.slug %>">
-        <div data-pjax-container>
+      <section id="page" class="<%= @page.slug %> clearfix">
+        <div data-pjax-container class='clearfix'>
           <%= yield %>
         </div>
       </section>

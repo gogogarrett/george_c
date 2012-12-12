@@ -243,18 +243,25 @@ section#page.process {
 
 }
 
-
 section#page.gallery {
+
   background: url('gallery.jpg') no-repeat;
 
   div#slideshow {
     padding-top: 20px;
     width: 600px;
+    height: 565px;
     margin-left: 15px;
     text-align: center;
     float: left;
+    position: relative;
 
     ul {
+      position:absolute;
+      top: 50%;
+      height: 500px;
+      margin-top: -150px;
+
       list-style: none;
       li {
         img {

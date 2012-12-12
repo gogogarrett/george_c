@@ -1,4 +1,4 @@
-<div id="slideshow">
+<div id="slideshow" class='clearfix'>
   <% @galleries.each_with_index do |gallery, index| %>
     <ul class="gallery <%= gallery.title.downcase.gsub(" ","_") %>" data-title="<%= gallery.title.downcase.gsub(" ","_") %>">
       <% gallery.images.each_with_index do |image, index| %>
